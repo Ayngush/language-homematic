@@ -1,0 +1,220 @@
+'fileTypes': [
+  'hms'
+  'hm'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'HomeMatic'
+'scopeName': 'source.homematic'
+'patterns': [
+    {
+        'include': '#comments'
+    }
+    {
+        'match': ';'
+        'name': 'punctuation.terminator.expression.homematic'
+    }
+    {
+        'match': '\\.=?'
+        'name': 'keyword.operator.string.homematic'
+    }
+    {
+    'captures':
+        '1':
+            'name': 'keyword.operator.assignment.homematic'
+        '2':
+            'name': 'storage.modifier.reference.homematic'
+        '3':
+            'name': 'storage.modifier.reference.homematic'
+        'match': '(?:(\\=)(&))|(&(?=[$A-Za-z_]))'
+    }
+    {
+        'match': '=|\\+=|\\-=|\\*=|/=|%=|&=|\\|=|\\^='
+        'name': 'keyword.operator.assignment.homematic'
+    }
+    {
+        'match': '<<|>>|~|\\^|&|\\|'
+        'name': 'keyword.operator.bitwise.homematic'
+    }
+    {
+        'match': '(==|!=|!=|<=|>=|<>|<|>)'
+        'name': 'keyword.operator.comparison.homematic'
+    }
+    {
+        'match': '(\\-|\\+|\\*|/|%)'
+        'name': 'keyword.operator.arithmetic.homematic'
+    }
+    {
+        'match': '(?i)(!|&&|\\|\\||#)'
+        'name': 'keyword.operator.logical.homematic'
+    }
+    {
+        'match': '(@)'
+        'name': 'keyword.operator.error-control.homematic'
+    }
+    {
+        'match': '(\\-\\-|\\+\\+)'
+        'name': 'keyword.operator.increment-decrement.homematic'
+    }
+    {
+        'match': '\\b(?i:(0x\\h*)L)'
+        'name': 'constant.numeric.integer.long.hexadecimal.homematic'
+    }
+    {
+        'match': '\\b(?i:(0x\\h*))'
+        'name': 'constant.numeric.integer.hexadecimal.homematic'
+    }
+    {
+        'match': '\\b(?i:(0o?[0-7]+)L)'
+        'name': 'constant.numeric.integer.long.octal.homematic'
+    }
+    {
+        'match': '\\b(?i:(0o?[0-7]+))'
+        'name': 'constant.numeric.integer.octal.homematic'
+    }
+    {
+        'match': '\\b(?i:(0b[01]+)L)',
+        'name': 'constant.numeric.integer.long.binary.homematic'
+    }
+    {
+        'match': '\\b(?i:(0b[01]+))',
+        'name': 'constant.numeric.integer.binary.homematic'
+    }
+    {
+        'match': '\\b(?i:(((\\d+(\\.(?=[^a-zA-Z_])\\d*)?|(?<=[^0-9a-zA-Z_])\\.\\d+)(e[\\-\\+]?\\d+)?))J)'
+        'name': 'constant.numeric.complex.homematic'
+    }
+    {
+        'match': '\\b(?i:(\\d+\\.\\d*(e[\\-\\+]?\\d+)?))(?=[^a-zA-Z_])'
+        'name': 'constant.numeric.float.homematic'
+    }
+    {
+        'match': '(?<=[^0-9a-zA-Z_])(?i:(\\.\\d+(e[\\-\\+]?\\d+)?))'
+        'name': 'constant.numeric.float.homematic'
+    }
+    {
+        'match': '\\b(?i:(\\d+e[\\-\\+]?\\d+))'
+        'name': 'constant.numeric.float.homematic'
+    }
+    {
+        'match': '\\b(?i:([1-9]+[0-9]*|0)L)'
+        'name': 'constant.numeric.integer.long.decimal.homematic'
+    }
+    {
+        'match': '\\b([1-9]+[0-9]*|0)'
+        'name': 'constant.numeric.integer.decimal.homematic'
+    }
+    {
+        'match': '\\b(if|else|while|foreach|quit)\\b'
+        'name': 'keyword.control.homematic'
+    }
+    {
+        'match': '\\b(boolean|integer|real|string|time|var|object)\\b'
+        'name': 'storage.type.homematic'
+    }
+    {
+        'match': '\\b(dom)\\b'
+        'name': 'support.class.homematic'
+    }
+    {
+        'match': '\\b(true|false|System|OT_OBJECT|OT_ENUM|OT_DEVICE|OT_CHANNEL|OT_DP|OT_VARDP|OPERATION_READ|OPERATION_WRITE|OPERATION_EVENT|$this$|$src$)\\b'
+        'name': 'support.constant.homematic'
+    }
+    {
+        'match': '\\b(Format|Length|Substr|Find|Split|StrValueByIndex|IsVar|GetVar|WriteLine)\\b'
+        'name': 'support.function.homematic'
+    }
+    {
+        'match': '\\b(VarType|ToString|ToInteger|ToTime|Year|Month|Day|Hour|Minute|Second|Week|Weekday|Yearday|IsLocalTime|IsDST|ToFloat|Date|GetObject|ID|Name|Type|TypeName|IsTypeOf|State|Channels|Interface|Address|HssType|Device|DPs|ChnGroupPartnerId|ChnDirection|ChnAESActive|ChnArchive|ChnRoom|ChnFunction|DPByHssDP|ValueType|Channel|Value|LastValue|Operations|Timestamp|Variable|Count|EnumUsedIDs|EnumUsedNames|Get|GetAt)\\b'
+        'name': 'keyword.other.special-method'
+    }
+    {
+        'include': '#strings'
+    }
+]
+
+'repository':
+    'comments':
+        'patterns': [
+              {
+                'begin': '(^[ \\t]+)?(?=!)'
+                'beginCaptures':
+                  '1':
+                    'name': 'punctuation.whitespace.comment.leading.homematic'
+                'end': '(?!\\G)'
+                'patterns': [
+                  {
+                    'begin': '!'
+                    'beginCaptures':
+                      '0':
+                        'name': 'punctuation.definition.comment.homematic'
+                    'end': '\\n'
+                    'name': 'comment.line.homematic'
+                  }
+                ]
+              }
+        ]
+    'string_escape':
+        'match': '\\\\.'
+        'name': 'constant.character.escape.homematic'
+    'string_interpolation':
+        'captures':
+            '1':
+                'name': 'punctuation.definition.string.end.homematic'
+        'match': '(#\\{)([^\\}]*)(\\})'
+        'name': 'string.interpolated.homematic'
+    'strings':
+        'patterns': [
+            {
+                'captures':
+                    '1':
+                        'name': 'punctuation.definition.string.begin.homematic'
+                    '2':
+                        'name': 'punctuation.definition.string.end.homematic'
+                'comment': 'this is faster than the next begin/end rule since sub-pattern will match till end-of-line and HomeMatic files tend to have very long lines.'
+                'match': '(\')[^\'\\\\]*(\')'
+                'name': 'string.quoted.single.homematic'
+            }
+            {
+                'begin': '\''
+                'beginCaptures':
+                    '0':
+                        'name': 'punctuation.definition.string.begin.homematic'
+                'end': '\''
+                'endCaptures':
+                    '0':
+                        'name': 'punctuation.definition.string.end.homematic'
+                'name': 'string.quoted.single.homematic'
+                'patterns': [
+                    {
+                        'include': '#string_escape'
+                    }
+                ]
+            }
+            {
+                'captures':
+                    '1':
+                        'name': 'punctuation.definition.string.begin.homematic'
+                    '2':
+                        'name': 'punctuation.definition.string.end.homematic'
+                    'comment': 'this is faster than the next begin/end rule since sub-pattern will match till end-of-line and HomeMatic files tend to have very long lines.'
+                    'match': '(")[^"#]*(")'
+                    'name': 'string.quoted.double.homematic'
+            }
+            {
+                'begin': '"'
+                'beginCaptures':
+                    '0':
+                        'name': 'punctuation.definition.string.begin.homematic'
+                'end': '"'
+                'endCaptures':
+                    '0':
+                        'name': 'punctuation.definition.string.end.homematic'
+                'name': 'string.quoted.double.homematic'
+                'patterns': [
+                    {
+                        'include': '#string_interpolation'
+                    }
+                ]
+            }
+        ]

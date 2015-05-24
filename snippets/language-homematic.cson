@@ -1,0 +1,13 @@
+'.source.homematic':
+  'if ... else':
+    'prefix': 'ife'
+    'body': 'if(${1:/* condition */})\n{\n\t${2:/* code */}\n}\nelse\n{\n\t${0:/* code */}\n}'
+  'if ...':
+    'prefix': 'if'
+    'body': 'if(${1:/* condition */})\n{\n\t${0:/* code */}\n}'
+  'while ...':
+    'prefix': 'while'
+    'body': 'while(${1:/* condition */})\n{\n\t${0:/* code */}\n}'
+  'foreach ...':
+    'prefix': 'foreach'
+    'body': 'foreach(${1:value}; ${2:array})\n{\n\t${0:/* code */}\n}'

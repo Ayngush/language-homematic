@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "name": "language-homematic",
+  "description": "Atom language support for HomeMatic Script",
+  "repository": {
+    "type": "git",
+    "url": "*"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "*"
+  },
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "*",
+  "keywords": [
+    "language",
+    "homematic",
+	"homematic script",
+    "atom",
+    "editor",
+    "syntax"
+  ]
+}
