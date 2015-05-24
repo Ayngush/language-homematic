@@ -4,17 +4,17 @@
   "description": "Atom language support for HomeMatic Script",
   "repository": {
     "type": "git",
-    "url": "*"
+    "url": "https://github.com/Ayngush/language-homematic.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "*"
+    "url": "https://github.com/Ayngush/language-homematic/issues"
   },
   "engines": {
     "atom": "*",
     "node": "*"
   },
-  "homepage": "*",
+  "homepage": "https://github.com/Ayngush/language-homematic",
   "keywords": [
     "language",
     "homematic",
