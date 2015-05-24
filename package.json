@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "language-homematic",
   "description": "Atom language support for HomeMatic Script",
   "repository": {
@@ -18,7 +18,7 @@
   "keywords": [
     "language",
     "homematic",
-	"homematic script",
+    "homematic script",
     "atom",
     "editor",
     "syntax"
